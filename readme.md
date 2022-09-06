@@ -56,7 +56,7 @@ https://gsi-cyberjapan.github.io/optimal_bvmap/
 
   [PDF版](https://maps.gsi.go.jp/help/pdf/vector/optbv_attribute.pdf)　[Word版](https://maps.gsi.go.jp/help/pdf/vector/optbv_attribute.docx)
 
-##問い合わせ先
+## 問い合わせ先
 - gsi-inad-9@gxb.mlit.go.jp
 
 ## 履歴
