@@ -44,7 +44,7 @@ https://gsi-cyberjapan.github.io/optimal_bvmap/
 </table>
 
 ### 属性等の仕様詳細
-* 地物種別コード一覧
+* 注記分類コード・地物種別コード一覧
 
 	[PDF版](https://maps.gsi.go.jp/help/pdf/vector/optbv_featurecodes.pdf)　[Excel版](https://maps.gsi.go.jp/help/pdf/vector/optbv_featurecodes.xlsx)
   
