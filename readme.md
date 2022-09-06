@@ -58,7 +58,7 @@ https://gsi-cyberjapan.github.io/optimal_bvmap/
 
 ## 問い合わせ先
 - gsi-inad-9★gxb.mlit.go.jp
-- ★を@に変えてください。
+- ★を@に変えてご利用ください。
 
 ## 履歴
 - 2022-09-06 公開。
