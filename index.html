@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<title>国土地理院最適化ベクトルタイル</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='./mapbox/1.13.0/mapbox-gl.js'></script>
+<link href='./mapbox/1.13.0/mapbox-gl.css' rel='stylesheet' />
+<!--
+<script src='https://www.unpkg.com/mapbox-gl@1.13.0/dist/mapbox-gl.js'></script>
+<link href='https://www.unpkg.com/mapbox-gl@1.13.0/dist/mapbox-gl.css' rel='stylesheet' />
+-->
+<style>
+body { margin:0; padding:0; }
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+#map canvas {
+  cursor: crosshair;
+}
+#menu {
+	position: absolute;
+	top:0%;
+	right:0%;
+	background: #3e3e3ec7;
+	color: #ffffff;
+	padding: 10px;
+	font-family: 'Open Sans', sans-serif;
+}
+#menu ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+</style>
+</head>
+<body>
+ 
+<div id='map'></div>
+<div id="menu">
+	<ul>
+		<li><input id="style" type="checkbox" value="std"><label for="std">サンプルスタイル（標準地図風）適用</label></li>
+		<li><input id="bdr" type="checkbox" value="bdr"><label for="bdr">タイル境界表示</label></li>
+	</ul>
+</div>
+
+<script>
+var map = new mapboxgl.Map({
+  container: 'map',
+  hash: true,
+  style: './style/skeleton.json',
+  center: [139.767144, 35.680621], 
+  zoom: 15,
+  maxZoom: 17.99,
+  minZoom: 4,
+  localIdeographFontFamily: false
+//  localIdeographFontFamily: ['MS Gothic', 'Hiragino Kaku Gothic Pro', 'sans-serif']
+});
+
+map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+map.addControl(new mapboxgl.ScaleControl());
+
+let check1 = document.getElementById('style');
+let check2 = document.getElementById('bdr');
+
+document.getElementById('style').addEventListener('click', () => {
+  check1.checked ? map.setStyle('./style/std.json') : map.setStyle('./style/skeleton.json');
+});
+
+document.getElementById('bdr').addEventListener('click', () => {
+  check2.checked ? map.showTileBoundaries = true : map.showTileBoundaries = false;
+});
+
+</script>
+ 
+</body>
+</html>
