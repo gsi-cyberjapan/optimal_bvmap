@@ -9,7 +9,7 @@
 			"minzoom": 0,
 			"maxzoom": 16,
 			"tiles": [
-				"https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap-v1/{z}/{x}/{y}.pbf"
+				"https://cyberjapandata.gsi.go.jp/xyz/optimal_bvmap-v1/{z}/{x}/{y}.pbf"
 			],
 			"attribution": "国土地理院最適化ベクトルタイル"
 		}
