@@ -4,12 +4,10 @@
 <meta charset='utf-8' />
 <title>国土地理院最適化ベクトルタイル</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='./mapbox/1.13.0/mapbox-gl.js'></script>
-<link href='./mapbox/1.13.0/mapbox-gl.css' rel='stylesheet' />
-<!--
-<script src='https://www.unpkg.com/mapbox-gl@1.13.0/dist/mapbox-gl.js'></script>
-<link href='https://www.unpkg.com/mapbox-gl@1.13.0/dist/mapbox-gl.css' rel='stylesheet' />
--->
+<script src='./lib/maplibre-gl@2.4.0/maplibre-gl.js'></script>
+<link href='./lib/maplibre-gl@2.4.0/maplibre-gl.css' rel='stylesheet' />
+<script src='./lib/pmtiles@2.10.0/index.js'></script>
+
 <style>
 body { margin:0; padding:0; }
 #map {
@@ -48,7 +46,10 @@ body { margin:0; padding:0; }
 </div>
 
 <script>
-var map = new mapboxgl.Map({
+let protocol = new pmtiles.Protocol();
+maplibregl.addProtocol("pmtiles",protocol.tile);
+
+var map = new maplibregl.Map({
   container: 'map',
   hash: true,
   style: './style/skeleton.json',
@@ -60,8 +61,7 @@ var map = new mapboxgl.Map({
 //  localIdeographFontFamily: ['MS Gothic', 'Hiragino Kaku Gothic Pro', 'sans-serif']
 });
 
-map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
-map.addControl(new mapboxgl.ScaleControl());
+map.addControl(new maplibregl.NavigationControl(), 'bottom-right');
 
 let check1 = document.getElementById('style');
 let check2 = document.getElementById('bdr');
