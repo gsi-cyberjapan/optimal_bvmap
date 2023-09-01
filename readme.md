@@ -14,7 +14,7 @@
 https://gsi-cyberjapan.github.io/optimal_bvmap/
 
 ## ベクトルタイルの仕様
-本ベクトルタイルは、PMTilesパッケージでの配信及び、[地理院タイル（ラスタ）](https://maps.gsi.go.jp/development/siyou.html)と同じ方式
+本ベクトルタイルは、PMTilesファイルでの配信及び、[地理院タイル（ラスタ）](https://maps.gsi.go.jp/development/siyou.html)と同じ方式
 （`https://cyberjapandata.gsi.go.jp/xyz/{t}/{z}/{x}/{y}.{ext}`）での配信を行っています。
 
 * 本ベクトルタイルは、タイルに分割した[Vector tile specification](https://github.com/mapbox/vector-tile-spec)形式のファイル群。
