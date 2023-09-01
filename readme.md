@@ -96,7 +96,7 @@ https://gsi-cyberjapan.github.io/optimal_bvmap/
 			"minzoom": 4,
 			"maxzoom": 16,
 			"tiles": [
-				"pmtiles://https://cyberjapandata.gsi.go.jp/xyz/optimal_bvmap-v1/optimal_bvmap-v1.pmtiles/{z}/{x}/{y}",
+				"pmtiles://https://cyberjapandata.gsi.go.jp/xyz/optimal_bvmap-v1/optimal_bvmap-v1.pmtiles/{z}/{x}/{y}"
 			],
 			"attribution": "国土地理院最適化ベクトルタイル"
 		}
@@ -105,9 +105,13 @@ https://gsi-cyberjapan.github.io/optimal_bvmap/
 
 ### PMTilesをZ/X/Y.pbfのタイルセットに変換する
 * [go-pmtiles](https://github.com/protomaps/go-pmtiles)でmbtilesに変換
-	`$pmtiles convert INPUT.pmtiles OUTPUT.mbtiles`
+	```
+	$pmtiles convert INPUT.pmtiles OUTPUT.mbtiles
+	```
 * [mb-util](https://github.com/mapbox/mbutil)でZ/X/Y.pbfに変換
-	`$mb-util --image_format=pbf INPUT.mbtiles OUTPUT_DIR`
+	```
+	$mb-util --image_format=pbf INPUT.mbtiles OUTPUT_DIR
+	```
 
 ## 問い合わせ先
 - gsi-inad-9★gxb.mlit.go.jp （★を@に変えてご利用ください。）
