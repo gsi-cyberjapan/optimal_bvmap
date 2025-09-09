@@ -349,7 +349,19 @@
 			"source-layer": "RdCL",
 			"maxzoom": 17,
 			"paint": {
-				"line-color": "rgba(0,0,0,1)",
+				"line-color": [
+					"case",
+					[
+						"==",
+						[
+							"get",
+							"vt_rnkwidth"
+						],
+						"不明"
+					],
+					"rgba(255,255,255,0)",
+					"rgba(0,0,0,1)"
+				],
 				"line-width": 1
 			}
 		},
@@ -957,8 +969,40 @@
 				],
 				"text-size": 10,
 				"text-field": [
-					"get",
-					"vt_text"
+					"case",
+					[
+						"==",
+						[
+							"get",
+							"vt_code"
+						],
+						7201
+					],
+					[
+						"to-string",
+						[
+							"/",
+							[
+								"round",
+								[
+									"*",
+									[
+										"to-number",
+										[
+											"get",
+											"vt_text"
+										]
+									],
+									1
+								]
+							],
+							1
+						]
+					],
+					[
+						"get",
+						"vt_text"
+					]
 				],
 				"text-writing-mode": [
 					"horizontal"
